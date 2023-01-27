@@ -9,3 +9,8 @@ a {
 a:hover {
     text-decoration: underline !important;
 }
+
+.container {
+    min-width: 480px !important;
+    margin: 0 auto;
+}
