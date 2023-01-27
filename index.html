@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="mx-auto w-50 mt-3 mb-5 container">
+        <div class="card shadow-sm">
+            <h4 class="card-title text-center border-bottom pb-2 pt-2 heading text-dark">Todo List</h4>
+            <div class="card-body border-bottom">
+                <form>
+                    <div class="d-flex gap-2">
+                        <div class="w-100">
+                            <input type="text" placeholder="O que você pretende fazer?" class="form-control">
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-body d-flex">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nº.</th>
+                            <th>Tarefa</th>
+                            <th>Status</th>
+                            <th colspan="2">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="align-middle">
+                            <th>1</th>
+                            <td>
+                                <span class="text-warning">Praticar JavaScript</span>
+                            </td>
+                            <td>
+                                <span class="text-warning">Em progresso</span>
+                            </td>
+                            <td>
+                                <i class="fa-solid fa-check me-2 text-success"></i><a href="#"
+                                    class="link-success">Feito</a>
+                            </td>
+                            <td>
+                                <i class="fa-solid fa-xmark me-2 text-danger"></i><a href="#"
+                                    class="link-danger">Remover</a>
+                            </td>
+                        </tr>
+                        <tr class="align-middle">
+                            <th>2</th>
+                            <td>
+                                <s class="text-success">Finalizar layout Todo List</s>
+                            </td>
+                            <td>
+                                <s class="text-success">Conclúido</s>
+
+                            </td>
+                            <td>
+                                <i class="fa-solid fa-check me-2 text-success"></i><s class="text-success">Feito</s>
+                            </td>
+                            <td>
+                                <i class="fa-solid fa-xmark me-2 text-danger"></i><a href="#"
+                                    class="link-danger">Remover</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
