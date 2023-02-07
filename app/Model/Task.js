@@ -10,7 +10,7 @@ class Task {
     }
 
     getTask() {
-        if (this.task !== '') return this.task
+        return this.task
     }
 
     getStatus() {
@@ -23,7 +23,7 @@ class Task {
                 break
         }
 
-        return this.status;
+        return this.status
     }
 }
 

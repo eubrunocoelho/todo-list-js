@@ -1,13 +1,21 @@
-import { Task } from './Model/Task.js';
-import { elements } from './View/base.js';
-import * as renderTask from './View/renderTask.js';
+import { Task as TaskObject } from './Model/Task.js'
+import { elements } from './View/base.js'
+import * as renderTask from './View/renderTask.js'
 
-elements.form.addEventListener('submit', (e) => { 
-    e.preventDefault();
+elements.form.addEventListener('submit', (e) => {
+    e.preventDefault()
 
-    const task = elements.taskInput.value;
-    const TaskObject = new Task(0, task, 0);
+    const taskInput = elements.taskInput.value
 
-    const taskArray = [TaskObject.getId(), TaskObject.getTask(), TaskObject.getStatus()];
-    console.log(taskArray);
+    if (taskInput !== '') {
+        const taskObject = new TaskObject(0, taskInput, 0)
+
+        const taskItem = {
+            taskId: taskObject.getId(),
+            task: taskObject.getTask(),
+            taskStatus: taskObject.getStatus()
+        }
+            
+        renderTask.render(taskItem);
+    }
 });
